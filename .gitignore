@@ -1,0 +1,10 @@
+.env
+venv
+pages/*
+chroma_db/*
+unused/collected_pdfs/*
+unused/data_tree.txt 
+unused/oldenv.txt
+unused/plan.txt
+unused/splitted_pdfs/*
+unused/suggestions-for-prompting.txt
