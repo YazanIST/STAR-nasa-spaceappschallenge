@@ -55,7 +55,7 @@ def inference(text, reset):
         top_k_similar_nodes = retriever.retrieve(text)
         to_view = []
         for node in top_k_similar_nodes:
-            print(node.get_score(), end = ' ')
+            # print(node.get_score(), end = ' ')
             if node.get_score() > THRESHOLD:
                 to_view.append((node.metadata()['file_name'], node.get_score()))
             # to_view.append((node.metadata()['file_name'], node.get_score()))
@@ -73,6 +73,15 @@ def inference(text, reset):
     elif reset:
         chat_engine.reset()
     return "", ""
+
+examples = [
+    [
+        "How should the length-to-depth ratio of the initial flaw be " + \
+        "assumed when using the NASGRO® computer program for glass " + \
+        "structure analysis? Please provide a detailed procedure.",
+        True
+    ]
+]
 
 playground = gr.Interface(
     fn=inference,
@@ -94,7 +103,10 @@ playground = gr.Interface(
         gr.Textbox(
             label="References"
         )
-    ]
+    ],
+    examples=examples,
+    cache_examples=True,
+    allow_flagging=False
 )
 
 playground.launch(share=True)
