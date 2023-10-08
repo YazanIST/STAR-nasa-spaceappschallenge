@@ -2,9 +2,5 @@ __pycache__
 chroma_db/*
 distilbert/*
 pages/*
-unused/collected_pdfs/*
-unused/splitted_pdfs/*
-unused/data_tree.txt
-unused/plan.txt
-unused/suggestions-for-prompting.txt
+unused/*
 venv/
