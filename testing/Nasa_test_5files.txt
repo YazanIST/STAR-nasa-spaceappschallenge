@@ -1,0 +1,83 @@
+Q1: What is the primary critical loading condition in windowpanes?
+
+A1: The primary critical loading condition in windowpanes is typically the bending stress resulting from applied pressures.
+
+Procedure:
+
+Identify the windowpane for analysis.
+Determine the applied pressures on the windowpane.
+Recognize that the primary critical loading condition is bending stress due to these applied pressures.
+Q2: What are the two material parameters in the equation for flaw growth velocity (Equation 1)?
+
+A2: The two material parameters in Equation 1 for flaw growth velocity are v0 and β.
+
+Procedure:
+
+Refer to Equation 1 for flaw growth velocity.
+Identify and define the material parameters v0 and β.
+Q3: How should the length-to-depth ratio of the initial flaw be assumed when using the NASGRO® computer program for glass structure analysis?
+
+A3: The length-to-depth ratio of the initial flaw shall be assumed to be ≥20 when using the NASGRO® computer program.
+
+Procedure:
+
+When utilizing the NASGRO® computer program for glass structure analysis:
+Set the length-to-depth ratio of the initial flaw to be equal to or greater than 20.
+Q4: What equation is used to establish the static life of a glass or ceramic component?
+
+A4: Equation 3 is used to establish the static life of a glass or ceramic component.
+
+Procedure:
+
+To determine the static life of a glass or ceramic component:
+Utilize Equation 3.
+Q5: What are the material parameters that need to be determined by test for each material used in the analysis?
+
+A5: The material parameters v0 and β in Equation 1, as well as KIC in Equation 2, shall be determined by test in the environment established for windowpane design.
+
+Procedure:
+
+For each material used in the analysis:
+Conduct tests to determine the values of material parameters v0, β (Equation 1), and KIC (Equation 2).
+Ensure that these tests are performed in the specified environment for windowpane design.
+Q6: How should the total flaw depth be determined for life analyses?
+
+A6: The total flaw depth shall be assumed to be three times the measured visible flaw depth, and all life analyses shall be based on the total flaw depth.
+
+Procedure:
+
+Calculate the measured visible flaw depth.
+Assume the total flaw depth to be three times the measured visible flaw depth.
+Perform all life analyses using this total flaw depth.
+Q7: What is the initial design flaw depth limited to for vehicle/element windowpanes?
+
+A7: The initial design flaw depth shall be limited on the lower bound to 0.0457-mm (0.0018-in) total flaw depth to provide reasonable damage discovery since the windowpanes receive damage during use.
+
+Procedure:
+
+Determine the initial design flaw depth for vehicle/element windowpanes.
+Ensure that the initial design flaw depth is limited to a minimum of 0.0457-mm (0.0018-in).
+Q8: What type of flaw shape is assumed for glass structure life predictions?
+
+A8: Long flaws with respect to the depth (length/depth ≥20) and flaw shape factor Q = 1 are assumed for glass structure life predictions.
+
+Procedure:
+
+When making life predictions for glass structures:
+Assume long flaws with length/depth ≥20 and flaw shape factor Q = 1.
+Q9: When is the methodology for flaw growth analysis in tempered glass the same as for annealed glass?
+
+A9: The methodology for flaw growth analysis in tempered glass is the same as for annealed glass when there is any tensile stress on the surface of the pane when loaded, such as during proof testing.
+
+Procedure:
+
+When analyzing tempered glass:
+Use the same methodology as for annealed glass, especially when there is any tensile stress on the surface of the pane during loading, such as during proof testing.
+Q10: What safety requirement is mentioned regarding pressure redundancy for crew-inhabiting pressure shells?
+
+A10: All vehicle/element windows that are or can be a part of the crew-inhabiting pressure shell shall have redundant pressure panes.
+
+Procedure:
+
+Ensure that all windows associated with the crew-inhabiting pressure shell:
+Have redundant pressure panes to meet the safety requirement.

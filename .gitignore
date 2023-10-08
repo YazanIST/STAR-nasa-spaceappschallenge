@@ -1,10 +1,10 @@
-.env
-venv
-pages/*
+__pycache__
 chroma_db/*
+distilbert/*
+pages/*
 unused/collected_pdfs/*
-unused/data_tree.txt 
-unused/oldenv.txt
-unused/plan.txt
 unused/splitted_pdfs/*
+unused/data_tree.txt
+unused/plan.txt
 unused/suggestions-for-prompting.txt
+venv/

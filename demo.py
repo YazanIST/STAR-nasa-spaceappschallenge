@@ -1,3 +1,5 @@
+import gradio as gr
+
 from dotenv import load_dotenv
 load_dotenv()
 
@@ -38,35 +40,61 @@ chat_engine = index.as_chat_engine(
                   "mission designers blast off with even greater " + \
                   "confidence, knowing that they have the right " + \
                   "requirements in place. You should analyze and suggest " + \
-                  "improvements to a NASA standards and recommend procedures."
+                  "improvements to a NASA standards."
 )
-
-# query_engine = index.as_query_engine()
+query_engine = index.as_query_engine()
 retriever = index.as_retriever(
     similarity_top_k=5,
 )
 
 THRESHOLD = 1e-9
 
-while True:
-    q = input('User: ')
-    if q == 'RESET':
+def inference(text, reset):
+    if text:
+        response = chat_engine.chat(text)
+        top_k_similar_nodes = retriever.retrieve(text)
+        to_view = []
+        for node in top_k_similar_nodes:
+            print(node.get_score(), end = ' ')
+            if node.get_score() > THRESHOLD:
+                to_view.append((node.metadata()['file_name'], node.get_score()))
+            # to_view.append((node.metadata()['file_name'], node.get_score()))
+        references = ""
+        if len(to_view) > 0:
+            for i, t in enumerate(to_view):
+                filename, score = t
+                splits = filename.split('_')
+                page_number = int(splits[1])
+                original_document = ''.join(splits[3:])
+                references += f'{i + 1}- Document: {original_document[:-4]}, Page: {page_number} (Score: {score}).\n'
+        if reset:
+            chat_engine.reset()
+        return response, references
+    elif reset:
         chat_engine.reset()
-        continue
+    return "", ""
 
-    response = chat_engine.chat(q)
-    # top_k_similar_nodes = retriever.retrieve(q)
-    top_k_similar_nodes = retriever.retrieve(str(response))
-    to_view = []
-    for node in top_k_similar_nodes:
-        print(node.get_score(), end = ' ')
-        if node.get_score() > THRESHOLD:
-            to_view.append(node.metadata()['file_name'])
-    print('STAR:', response)
-    if len(to_view) > 0:
-        print('References:')
-        for i, filename in enumerate(to_view):
-            splits = filename.split('_')
-            page_number = int(splits[1])
-            original_document = ''.join(splits[3:])
-            print(f'\t{i + 1}- Document: {original_document[:-4]}, Page: {page_number}.')
+playground = gr.Interface(
+    fn=inference,
+    inputs=[
+        gr.Textbox(
+            value="Hello, who are you?",
+            label="Input",
+            info="Chat with STAR."
+        ),
+        gr.Checkbox(
+            label="Reset chat history",
+            info="Start a new conversation from scratch with STAR."
+        )
+    ],
+    outputs=[
+        gr.Textbox(
+            label="Response"
+        ),
+        gr.Textbox(
+            label="References"
+        )
+    ]
+)
+
+playground.launch(share=True)

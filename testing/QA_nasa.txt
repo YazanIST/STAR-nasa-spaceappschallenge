@@ -1,0 +1,35 @@
+Question: What is the requirement for structural glass or ceramic components after an impact event according to NASA-STD-5018?
+Answer: According to NASA-STD-5018, structural glass or ceramic components must maintain the structural and functional integrity of the window during all appropriate design environments after an impact event.
+
+Question: What is the minimum margin of safety that the damaged structural glass or ceramic structure must maintain for the duration of the mission being assessed?
+Answer: The damaged structural glass or ceramic structure must maintain a margin of safety of 0.0 or greater for the duration of the mission being assessed, as per NASA-STD-5018.
+
+Question: Describe the requirements related to glass-to-metal contact during exposure to flight random vibration and vibroacoustic environments.
+Answer: The window seal should prohibit glass-to-metal contact before, during, and after exposure to flight random vibration and vibroacoustic environments, as outlined in NASA-STD-5018.
+
+Question: What is the purpose of the glass slipping and rattling requirement in the window design?
+Answer: The purpose of the glass slipping and rattling requirement is to ensure that the window design prevents slipping and rattling of the glass during exposure to flight and ground transportation, as well as handling, random vibration, and vibroacoustic environments, as specified in NASA-STD-5018.
+
+Question: Explain the significance of the glass pane-to-seal (or cushion) interface requirement.
+Answer: The glass pane-to-seal (or cushion) interface requirement is important because it ensures that the window seal meets its performance requirements within the temperature extremes of the seal-to-windowpane interface for the duration of the design life of the window, preventing degradation from the environment or aging. Additionally, it prohibits the phase change (glassy transition) of the seal (or cushion) material in contact with the glass at the lower temperature extremes of the seal/glass pane interface.
+
+Question: What does NASA-STD-5018 specify regarding the assessment of combined loads for the glass component design?
+Answer: NASA-STD-5018 requires that the glass component design should be assessed for all combined loads that can occur, and these combined loads may be applied in a time-consistent manner.
+
+Question: What is the purpose of stress distribution correlation in the context of window surfaces, as mentioned in section 4.7.11?
+Answer: Stress distribution correlation is used to obtain the stress distribution across the window surfaces during vehicle testing and correlate it with an analytical model with the same load cases applied, as outlined in NASA-STD-5018.
+
+Question: Why is spring stiffness important in the window design according to section 4.7.12?
+Answer: Spring stiffness is crucial because it needs to be determined for all springs and seals included in the window design. The measured stiffness for the springs and seals is used for all analyses and models of the window assembly as specified in NASA-STD-5018.
+
+Question: What standards and methodologies are required for the stress analysis of the glass or ceramic structural component, as stated in section 4.7.13?
+Answer: The stress analysis of the glass or ceramic structural component should adhere to the current best practices for structural design, analysis, and reporting standards and methodologies, according to NASA-STD-5018.
+
+Question: Describe the requirements for tempered glass in the context of flaw growth analysis as mentioned in section 4.7.14.
+Answer: The flaw growth analysis methodology for tempered glass should be the same as for annealed glass for any tensile stress on the surface of the pane when loaded, such as during proof testing. However, if the total stress at the initial design flaw depth is compressive after combining the temper stresses and the proof tensile stresses, then a flaw growth analysis is not required, as specified in NASA-STD-5018.
+
+Question: What does NASA-STD-5018 require regarding redundancy in pressure panes for crew-inhabiting pressure shells, as mentioned in section 4.8.1?
+Answer: According to NASA-STD-5018, all vehicle/element windows that are or can be part of the crew-inhabiting pressure shell shall have redundant pressure panes, and these redundant panes should be designed to maintain the vehicle/element internal pressure in the event that either pane fails.
+
+Question: What is the significance of the proof factor for annealed and tempered glass, as outlined in section 4.9.4?
+Answer: The proof factor is important as it determines the minimum stress associated with the maximum combined limit load. It screens manufacturing flaws and is based on fracture mechanics analysis and structural analysis requirements for windowpanes and glass structures, as specified in NASA-STD-5018.

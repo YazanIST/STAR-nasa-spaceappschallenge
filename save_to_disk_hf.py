@@ -12,42 +12,25 @@ import transformers
 
 from langchain.embeddings.huggingface import HuggingFaceEmbeddings
 
-chroma_client = chromadb.PersistentClient(path="chroma_db/")
+chroma_client = chromadb.PersistentClient(path="distilbert")
 
-chroma_collection = chroma_client.get_or_create_collection("nasa_data")
+chroma_collection = chroma_client.get_or_create_collection("distilbert")
 
 documents = SimpleDirectoryReader('pages').load_data()
 
 print('Pages are loaded.')
 
-# Load the Hugging Face embedding model
-
-# embed_model = HuggingFaceEmbeddings(model_name="sentence-transformers/multi-qa-MiniLM-L6-cos-v1")
-# embed_model = transformers.AutoModel.from_pretrained("sentence-transformers/multi-qa-MiniLM-L6-cos-v1")
-embed_model = HuggingFaceEmbedding(model_name="BAAI/bge-small-en-v1.5")
+embed_model = HuggingFaceEmbedding(model_name="distilbert-base-uncased")
 
 print('Model is loaded into GPU.')
 
-# Create a LangchainEmbedding object
-# langchain_embedding = LangchainEmbedding(embed_model)
-
 vector_store = ChromaVectorStore(chroma_collection=chroma_collection)
-# Create a storage context with the LangchainEmbedding object
 storage_context = StorageContext.from_defaults(vector_store=vector_store)
 
 print('Will start indexing and embedding.')
 
 service_context = ServiceContext.from_defaults(embed_model=embed_model)
 
-# Create a VectorStoreIndex object with the LangchainEmbedding object
-# index = VectorStoreIndex.from_documents(
-#     documents,
-#     storage_context=storage_context,
-#     chroma_collection=chroma_collection,
-#     show_progress=True,
-#     embed_model=embed_model,
-#     service_context=service_context
-# )
 index = VectorStoreIndex.from_documents(
     documents,
     storage_context=storage_context,
