@@ -1,5 +1,5 @@
 # STAR - NASA Space Apps Challenge
-Our implementation for the challenge "STAR: Revolutionizing Technical Standards with AI" from NASA Space Apps Challenge 2023.
+Our implementation for the challenge "STAR: Revolutionizing Technical Standards with AI" from NASA Space Apps Challenge 2023. Second place prize winner over Jordanian teams/projects.
 
 # High-level Summary
 We propose to develop a conversational chatbot, to help mission designers with procedures and recommendations. The chatbot will be able to take images as input and solve equations using WolframAlpha. We will also develop a web application to make it easy for mission designers to interact with the chatbot and other tools and resources to ensure the safety, reliability, and effectiveness of aerospace products.
