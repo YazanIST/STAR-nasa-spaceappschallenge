@@ -47,7 +47,7 @@ retriever = index.as_retriever(
     similarity_top_k=5,
 )
 
-THRESHOLD = 1e-9
+THRESHOLD = 1e-10
 
 def inference(text, reset):
     if text:
@@ -66,12 +66,14 @@ def inference(text, reset):
                 splits = filename.split('_')
                 page_number = int(splits[1])
                 original_document = ''.join(splits[3:])
-                references += f'{i + 1}- Document: {original_document[:-4]}, Page: {page_number} (Score: {score}).\n'
+                references += f'{i + 1}- Document: " + \
+                    "{original_document[:-4]}, Page: " + \
+                        "{page_number} (Score: {score}).\n'
         if reset:
-            chat_engine.reset()
+            memory.reset()
         return response, references
     elif reset:
-        chat_engine.reset()
+        memory.reset()
     return "", ""
 
 examples = [
